@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="myQuotes">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script type="text/javascript" src="userpage.js"></script>
+  </head>
+  <body class="container" ng-controller="myquoteController as myquote">
+   <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+     <a href= "addquotes.html" class="navbar-text"> add </a>  
+     <a href="search.html" class="navbar-text"> search </a> 
+    <a href="userprofile.html" class="navbar-text"> profile </a> 
+     <a href="index.html" class="navbar-text"> logout </a> 
+  </div>
+</nav>
+   
+          
+    <div class="row" class="pull-left" id="profile">
+    <div class="large-3 columns ">
+          <div class="panel">
+            <a href="#"><img src="https://mail.google.com/mail/u/0/?ui=2&ik=77dab2e664&view=fimg&th=14f2761b0f498b9e&attid=0.2&disp=inline&realattid=f_icxvlmui1&safe=1&attbid=ANGjdJ-QBxf6BzYJSvvXlFFTXkqtT6k-hrUtulCT4yaBShLWA9ImqMEo8FH7L8_7i51sjSISepSzM4oWJ2nEyjOIdMn1bLTlapT1ycCCA3am40UkTf3L7SqSMF5VeQU&ats=1439562790978&rm=14f2761b0f498b9e&zw&sz=w1342-h547" height="300" width="300" class="img-rounded" class="img-responsive"/></a>
+            <h3>GWC Grace Hopper</h3>
+              <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+              <section class="section">
+                  <p> #Ilooklikeanengineer </p>
+              </section>
+            </div>
+          </div>
+        </div>
+        </div>
+      <div id="feed">
+        <div class="large-6 columns" ng-repeat="quote in myquote.quotes" class="pull-right">
+     
+           
+          <div class="row">
+             
+            <div class="large-10 columns">
+                <blockquote class="quotediv">
+              <p class="quotetext">  " {{quote.text}} "     </p>
+                    <footer> {{quote.author}} <cite title="Source Title" class="quotetext"> in Source Author</cite></footer>
+                     
+                    <h6> <a href="" class="requote"> Requote </a></h6>
+                    
+                </blockquote>
+          </div>
+           </div>     
+          <hr/>        
+      </div>  
+       
+      </div>
+      
+  
+        <footer class="row">
+        <div class="large-12 columns">
+          <hr/>
+          <div class="row">
+            <div class="large-5 columns">
+             
+            </div>
+            
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
+ 

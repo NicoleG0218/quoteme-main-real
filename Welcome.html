@@ -1,0 +1,59 @@
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="welcome.css">
+</head>
+<body>
+
+    
+    <center>Welcome<br/>
+    <button class="btn btn-default" onclick="yo()">"Quote Me"</button>
+    </center>
+</body>
+
+
+
+
+<script type="text/javascript">
+console.log("Hello");
+
+    
+var images = [
+    {
+        subtitle : 'Subtitle text for image one...',
+        src : 'gif/gif1.gif'
+    },
+    {
+        subtitle : 'Subtitle text for image two...',
+        src : 'https://img0.etsystatic.com/003/0/6216861/il_fullxfull.399859864_azhx.jpg'
+    },
+    {
+        subtitle : 'Subtitle text for image three...',
+        src : 'http://www.preferredentertainment.com/novelty/images/Pop%20art%203.jpg'
+    },
+    {
+        subtitle : 'Subtitle text for image four...',
+        src : 'https://thetreasurehunteruk.files.wordpress.com/2013/08/call-me-pop-art-style-print-c2a317-very-co-uk.jpg'
+    }
+];
+
+function setBackground (images) {
+    // generates a random integer between 0 and the length of the supplied array:
+    var n = Math.floor(Math.random() * images.length),
+        // works out whether to use the 'textContent' or 'innerText' property:
+        textProperty = 'textContent' in document ? 'textContent' : 'innerText';
+
+    // sets the background-image of the 'body' element:
+    document.body.style.backgroundImage = 'url(' + images[n].src + ')';
+
+    // sets the text of the relevant subtitle element:
+    document.getElementById('subtitleElementID')[textProperty] = images[n].subtitle;
+}
+
+setBackground(images);
+</script>   
+</html>
